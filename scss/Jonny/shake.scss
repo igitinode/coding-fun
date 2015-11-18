@@ -1,0 +1,365 @@
+/*! shake - v0.9.0 - 2015-10-30 */
+@import "base";
+body {
+    background-color: $back-color;
+}
+header {
+    width: 100%;
+    height: (840/32)+rem;
+    @include background-img($head-img);
+}
+.head-text {
+    width: (536/32)+rem;
+    margin: (382/32)+rem auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: (32/32)+rem;
+        color: $title-color;
+        position: relative;
+        margin-bottom: (32/32)+rem;
+        &:before {
+            content: '';
+            width: (183/32)+rem;
+            height: (3/32)+rem;
+            background-color: $title-color;
+            position: absolute;
+            top: (20/32)+rem;
+            left: 0;
+        }
+        &:after {
+            content: '';
+            width: (183/32)+rem;
+            height: (3/32)+rem;
+            background-color: $title-color;
+            position: absolute;
+            top: (20/32)+rem;
+            right: 0;
+        }
+    }
+    p {
+        font-size: (25/32)+rem;
+        color: $font-color;
+        margin: (8/32)+rem auto;
+        span {
+            color: $title-color;
+        }
+    }
+    .last {
+        text-align: center;
+        font-size: (22/32)+rem;
+        color: $foot-color;
+    }
+}
+footer {
+    width: (417/32)+rem;
+    height: (48/32)+rem;
+    margin: 0 auto (30/32)+rem;
+    @include background-img($foot-img);
+}
+.activity {
+    border-style: solid;
+    border-width: (124/32)+rem (105/32)+rem (29/32)+rem (102/32)+rem;
+    -webkit-border-image: $border-img 124 105 29 102 round round;
+    -o-border-image: $border-img 124 105 29 102 round round;
+       border-image: $border-img 124 105 29 102 fill round round;
+
+    position: relative;
+    top: (-80/32)+rem;
+    .title {
+        width: (283/32)+rem;
+        height: (80/32)+rem;
+        @include background-img($activ-img);
+        margin: (-20/32)+rem auto 0;
+    }
+    .text {
+        height: 5rem;
+        width: (500/32)+rem;
+        border: 1px solid yellow;
+        margin-left: -36px;
+    }
+}
+.session {
+    width: (548/32)+rem;
+    margin-left: (-60/32)+rem;
+    margin-top: (20/32)+rem;
+    margin-bottom: (20/32)+rem;
+    div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .times {
+        width: (149/32)+rem;
+        height: (110/32)+rem;
+        @include background-img($session1);
+        padding-top: (32/32)+rem;
+        text-align: center;
+        .time {
+            font-family: 'shakenum';
+            font-size: (42/32)+rem;
+            color: $font-times;
+        }
+        .act {
+            font-size: (23/32)+rem;
+            color: $font-act;
+        }
+    }
+    .times-ing {
+        @extend .times;
+        background-image: $session2;
+        .act {
+            @extend .act;
+            color: $title-color;
+        }
+    }
+    .begin {
+        width: (366/32)+rem;
+        height: (104/32)+rem;
+        background-color: $begin-color;
+        @include border-radius(6px);
+        padding-top: (16/32)+rem;
+        padding-left: (22/32)+rem;
+        clear: both;
+        span {
+            font-family: 'shaketime';
+            font-size: 0.8rem;
+            font-weight: normal;
+            margin-right: (8/32)+rem;
+        }
+        .title-time {
+            font-size: (56/32)+rem;
+            font-weight: bold;
+        }
+        .title-time-ing {
+            @extend .title-time;
+            font-size: (46/32)+rem;
+        }
+        .into {
+            font-size: (23/32)+rem;
+            float: right;
+            margin-right: (24/32)+rem;
+            color: $font-act;
+        }
+    }
+    .close {
+        color: $font-act;
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content: '已结束';
+            width: (110/32)+rem;
+            height: (36/32)+rem;
+            background-color: $font-act;
+            color: $begin-color;
+            font-size: (20/32)+rem;
+            text-align: center;
+            line-height: (36/32)+rem;
+            position: absolute;
+            top: (10/32)+rem;;
+            right: (-28/32)+rem;
+            -webkit-transform:rotate(45deg);
+                -ms-transform:rotate(45deg);
+                    transform:rotate(45deg);
+        }
+    }
+    .ing {
+        @extend .close;
+        color: $title-color;
+        &:after {
+            @extend .close:after;
+            content: '进行中';
+            background-color: $title-color;
+        }
+        .into {
+            @extend .into;
+            color: $title-color;
+        }
+    }
+    .future {
+        @extend .close;
+        color: $font-color2;
+        &:after {
+            @extend .close:after;
+            content: '未开始';
+            background-color: $font-color2;
+        }
+    }
+}
+.head-img {
+    @extend header;
+    height: (508/32)+rem;
+    background-image: $head-img2;
+}
+.lunbo {
+    width: (500/32)+rem;
+    font-size: (24/32)+rem;
+    color: $font-color;
+    padding: (30/32)+rem;
+    margin: (36/32)+rem auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    @include border-radius((8/32)+rem);
+    position: relative;
+    li {
+        list-style-type:none;
+        clear: both;
+        span {
+            color: $title-color;
+        }
+        .fr {
+            color: $font-color;
+            float: right;
+        }
+    }
+    &::after {
+        content: '';
+        width: (86/32)+rem;
+        height: (85/32)+rem;
+        @include background-img($lunbo-ball-img);
+        position: absolute;
+        top: (-56/32)+rem;
+        right: (-26/32)+rem;
+    }
+}
+.share {
+    p {
+        font-size: (24/32)+rem;
+        color: $font-color;
+        text-align: center;
+    }
+    div {
+        width: (330/32)+rem;
+        height: (81/32)+rem;
+        @include background-img($share-bg-img);
+        margin: (14/32)+rem auto (60/32)+rem;
+    }
+}
+.play {
+    width: (566/32)+rem;
+    height: (533/32)+rem;
+    @include background-img($play-bg-img);
+    margin: (-120/32)+rem auto 0;
+    padding-top: (33/32)+rem;
+    position: relative;
+    &::before {
+        content: '';
+        width: (54/32)+rem;
+        height: (56/32)+rem;
+        @include background-img($play-before-img);
+        position: absolute;
+        top: (468/32)+rem;
+        left: 0;
+    }
+    .run {
+        width: (566/32)+rem;
+        height: (566/32)+rem;
+        @include background-img($play-run-img);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .doors {
+        display: none;
+        width: (500/32)+rem;
+        height: (500/32)+rem;
+        margin: 0 auto;
+        @include border-radius(50%);
+        overflow: hidden;
+        position: relative;
+        .door {
+            display: table-cell;
+            width: (250/32)+rem;
+            height: (500/32)+rem;
+            background-color: $door-color;
+            outline: (4/32)+rem solid $door-border;
+        }
+    }
+    .loading {
+        font-size: (40/32)+rem;
+        color: $title-color;
+        text-align: center;
+        position: absolute;
+        top: (210/32)+rem;
+        left: (180/32)+rem;
+    }
+    .hands {
+        @extend .doors;
+        display: block;
+        .hand {
+            width: (422/32)+rem;
+            height: (382/32)+rem;
+            @include background-img($play-hand-img);
+            position: absolute;
+            top: (100/32)+rem;
+            left: (80/32)+rem;
+            -webkit-transform-origin: 100% 100%;
+                -ms-transform-origin: 100% 100%;
+                    transform-origin: 100% 100%;
+        }
+    }
+}
+.alert {
+    background-color:rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 99;
+    .bg {
+        width: 100%;
+        height: (681/32)+rem;
+        @include background-img($alert-bg-img);
+        position: relative;
+        top: 15%;
+        overflow: hidden;
+    }
+    .money {
+        width: (224/32)+rem;
+        padding-left: (20/32)+rem;
+        font-size: (27/32)+rem;
+        font-weight: bold;
+        margin: (250/32)+rem auto 0;
+        color: $alert-color;
+        clear: both;
+        .moneys {
+            font-size: (76/32)+rem;
+            font-family: 'shakenum';
+            font-weight: normal;
+        }
+        .fr {
+            font-size: (32/32)+rem;
+            float: right;
+            margin-top: (38/32)+rem;
+            margin-right: (8/32)+rem;
+        }
+    }
+    .show-text {
+        width: (315/32)+rem;
+        color: $font-color2;
+        font-size: (26/32)+rem;
+        margin: (34/32)+rem auto 0;
+        text-align: center;
+        span {
+            font-size: (22/32)+rem;
+        }
+    }
+    .sure {
+        width: (472/32)+rem;
+        height: (82/32)+rem;
+        margin: (70/32)+rem auto 0;
+        @include border-radius((5/32)+rem);
+        background-color: $sure-bg-color;
+        display: block;
+        border: none;
+        font-size: (38/32)+rem;
+        color: $sure-font-color;
+        font-weight: bold;
+        border-bottom: (6/32)+rem solid $sure-border-color;
+    }
+}

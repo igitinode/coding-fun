@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>旋转木马 幻灯片开发</title>
+  <link rel="stylesheet" type="text/css" href="./css/global.css">
+  <link rel="stylesheet" type="text/css" href="./css/carrousel.css">
+  <script type="text/javascript" src="./js/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="./js/carrousel.js"></script>
+</head>
+<body style="padding: 50px;">
+  <div class="J_Poster poster-main" data-setting='{"width": 1000,
+                                                   "height": 270,
+                                                   "posterWidth": 640,
+                                                   "posterHeight": 270,
+                                                   "scale": 0.8,
+                                                   "autoPlay": true,
+                                                   "delay": 2000,
+                                                   "verticalAlign": "middle",
+                                                   "speed": 500
+                                                  }'>
+    <div class="poster-btn poster-prev-btn"></div>
+      <ul class="poster-list">
+        <li class="poster-item"><a href="#"><img src="./images/1.jpg" style="width: 100%;" /></a></li>
+        <li class="poster-item"><a href="#"><img src="./images/2.jpg" style="width: 100%;" /></a></li>
+        <li class="poster-item"><a href="#"><img src="./images/3.jpg" style="width: 100%;" /></a></li>
+        <li class="poster-item"><a href="#"><img src="./images/4.jpg" style="width: 100%;" /></a></li>
+        <li class="poster-item"><a href="#"><img src="./images/5.jpg" style="width: 100%;" /></a></li>
+      </ul>
+    <div class="poster-btn poster-next-btn"></div>
+  </div>
+
+  <script type="text/javascript">
+    // 2、 提供配置参数，项目经理的某些特殊需求
+    /* 比如宽高、底部对齐、居中对齐、顶部对齐等
+     * 先传递高度，初始化的时候占好位置，等图片加载好了之后填充，避免实际高度为图片高度，
+     */
+    // 将配置参数放到每一个旋转木马属性上去，即参照淘宝 data-setting='{"width": 1000,......}' 注意json数据格式
+    // var setting = {
+    //   width: 1000, //木马总体宽高
+    //   height: 270,
+    //   posterWidth: 640, //第一张图片的真实宽高，便于计算剩下图片的位置
+    //   posterHeight: 270,
+    //   scale: 0.9, //缩放比例基于上一张
+    //   verticalAlign: "middle",// 居中对齐
+    //   speed: 500, //移动速度
+    // };
+
+    // 1、 一个页面有可能有多个旋转木马
+    /* 避免new很多个对象，所以直接类初始化一个数组
+     * var carrousel1 = new Carrousel($('.J_Poster').eq(0));
+     * var carrousel2 = new Carrousel($('.J_Poster').eq(1));
+    */
+    // 传递一个数组
+    Carrousel.init($('.J_Poster'));
+
+  </script>
+</body>
+</html>

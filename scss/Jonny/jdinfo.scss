@@ -1,0 +1,197 @@
+/*! jdinfo - v1.0.0 - 2015-08-14 */
+html,body,div,input,textarea,p{ 
+    margin:0;
+    padding:0;
+}
+html {
+    -webkit-text-size-adjust:none; 
+    -webkit-appearance:none;
+}
+.head {
+  width: 100%;
+  height: 5.1875rem;
+  background: #7b7988;
+  text-align: center;
+}
+.headtext {
+  line-height: 5.1875rem;
+}
+.text {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.number {
+  font-size: 1.125rem;
+  color: #f4eb16;
+}
+.bodyinfo {
+  width: 100%;
+  display: -webkit-flex;
+  border-bottom: 1px solid #cfcfcf;
+}
+.time {
+  width: 6.875rem;
+  text-align: center;
+  margin: auto;
+}
+.partition {
+  width: 2px;
+  background: #cfcfcf;
+  position: relative;
+}
+.partition:before {
+  content: '\00a0';
+  display: block;
+  border: 2px solid #cfcfcf;
+  border-radius: 50%;
+  width: 1.05rem;
+  height: 1.05rem;
+  position: absolute;
+  top: 39%;
+  left: -0.5625rem;
+  background: #FFFFFF;
+}
+.partition:after {
+  content: '\00a0';
+  display: block;
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  position: absolute;
+  top: 42.2%;
+  left: -0.4rem;
+  background: #1ba6ff;
+}
+.partition-ok {
+  width: 2px;
+  background: #cfcfcf;
+  position: relative;
+  margin-bottom: 15%;
+}
+.partition-ok:before {
+  content: '\00a0';
+  display: block;
+  border: 2px solid #cfcfcf;
+  border-radius: 50%;
+  width: 1.05rem;
+  height: 1.05rem;
+  position: absolute;
+  top: 80%;
+  left: -0.5625rem;
+  background: #FFFFFF;
+}
+.partition-ok:after {
+  content: '\00a0';
+  display: block;
+  border: 2px solid #de2f51;
+  border-top-width: 0;
+  border-right-width: 0;
+  width: 0.469rem;
+  height: 0.25rem;
+  -webkit-transform: rotate(-45deg);
+  position: absolute;
+  top: 93%;
+  left: -0.19rem;
+}
+.ing {
+  color: #797986;
+}
+.ok {
+  color: #de2f51;
+}
+.day {
+  font-size: 0.6875rem;
+  //color: #797986;
+}
+.hours {
+  font-size: 1.5rem;
+  //color: #797986;
+}
+.info {
+  width: 13.125rem;
+  font-size: 0.875rem;
+  //color: #797986;
+  //text-align: center;
+  padding: 1.56rem 1.2rem;
+  //height: 4.24rem;
+}
+
+/**
+ *  移动设备常用mediaquery
+ *  应用于1024px以下设备
+ *  移动设备的基本字体为16px
+ */
+@media screen and (min-width : 640px) and (max-width : 1023px) {
+    html {
+        font-size:32px;
+    }
+}
+
+@media screen and (max-width : 639px) and (min-width : 424px) {
+    html {
+        font-size:21.2px;
+    }
+}
+
+@media screen and (max-width : 423px) and (min-width : 414px) {
+    html {
+        font-size:20.7px;
+    }
+}
+
+@media screen and (max-width : 413px) and (min-width : 384px) {
+    html {
+        font-size:19.2px;
+    }
+}
+
+@media screen and (max-width : 383px) and (min-width : 375px) {
+    html {
+        font-size:18.75px;
+    }
+}
+
+@media screen and (max-width : 374px) and (min-width : 360px) {
+    html {
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width : 359px) and (min-width : 320px) {
+    html {
+        font-size:16px;
+    }
+}
+
+.icon-hook {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 45px;
+}
+.icon-hook:before {
+  content: '\00a0';
+  display: block;
+  border: 9px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  background: #228B22;
+}
+.icon-hook:after {
+  content: '\00a0';
+  display: block;
+  border: 4px solid #fff;
+  border-top-width: 0;
+  border-right-width: 0;
+  width: 15px;
+  height: 8px;
+  -webkit-transform: rotate(-45deg);
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+

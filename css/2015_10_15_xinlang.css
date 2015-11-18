@@ -1,0 +1,68 @@
+html {overflow-y:scroll;}
+body {margin:0; padding:0; font:12px/1.5 \5b8b\4f53,Arial,sans-serif;/*background:#ffffff;*/}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration:underline;}
+a:active {color:#ba2636;}
+.left,.c-fl{float:left;}
+.right,.c-fr{float:right;}
+
+/* NTES nav start */
+.ntes_nav_wrap{height:45px}
+.c-fl{float:left}
+.c-fr{float:right}
+
+.ntes-nav-select-list{background:#fff;border:1px solid #cdcdcd;-webkit-box-shadow:0 0 8px #cdcdcd;-moz-box-shadow:0 0 8px #cdcdcd;box-shadow:0 0 8px #cdcdcd}
+.ntes-nav-select{cursor:pointer;position:relative;outline:0}
+.ntes-nav-select-arr{position:absolute;z-index:10;right:5px;top:20px;border-color:#c2c2c2 transparent transparent;border-style:solid dashed dashed;border-width:4px 4px 0;font-size:0;height:0;width:0;line-height:0}
+.ntes-nav-select-pop{display:none;position:absolute;z-index:1000;left:0}
+.ntes-nav-select-list{width:135px;padding:6px 0}
+.ntes-nav-select-list a:hover{text-decoration:none}
+.ntes-nav-select-list li{float:left;position:static;border:0}
+.ntes-nav-select-list li a{display:block;padding:0 10px;position:relative;z-index:1;_zoom:1}
+.ntes-nav-select-list li a span{display:block;cursor:pointer;width:115px;height:31px;line-height:31px;border-bottom:1px dashed #dcdddd}
+.ntes-nav-select-list li a:hover span{border-bottom:0;padding-bottom:1px}
+.ntes-nav-select-list li.last a span{border-bottom:0}
+.ntes-nav-select-list li.last a:hover span{padding-bottom:0}
+.ntes-nav-select-list li a,.ntes-nav-select-list li a:visited{color:#585858}
+.ntes-nav-select-list li a:hover{color:#252525;font-weight:bold;background:#f2f2f2;padding-top:1px;margin-top:-1px}
+.ntes-nav-select-list li a:hover span{background:0}
+.ntes-nav-select-pop{top:43px;padding:12px 0 0}
+.ntes-nav-select-wide .ntes-nav-select-title{padding:0 30px 0 13px}
+.ntes-nav-select-wide .ntes-nav-select-arr{right:15px}
+.ntes-nav{text-align:left}
+.ntes-nav,.ntes-nav a,.ntes-nav a:visited,.ntes-nav a:hover{color:#fff}
+
+.ntes-nav-entry-wide{padding:0 17px}
+
+.ntes-nav-entry-bgblack:hover,.ntes-nav-select-title{background:#1e1e1e}
+.ntes-nav{width:100%;margin:0 auto;height:43px;line-height:42px;position:fixed;_position:absolute;z-index:9999;left:0;top:0;background:#333;border-bottom:2px solid #606060}
+.ntes-nav-main{width:960px;margin:0 auto;background:#333}
+.ntes-nav-entry-wblog{margin-top:10px;display:block;width:25px;height:23px;text-indent:-999em;overflow:hidden}
+.ntes-nav-entry-wblog{background-image:url(http://img1.cache.netease.com/f2e/include/common_nav/images/nav_sprite_v33.png);_background-image:url(http://img1.cache.netease.com/f2e/include/common_nav/images/nav_sprite_ie6_v33.png);background-repeat:no-repeat}
+.ntes-nav-app-newsapp,.ntes-nav-app-ht,.ntes-nav-app-open,.ntes-nav-app-note,.ntes-nav-app-yuedu,.ntes-nav-app-cd,.ntes-nav-app-cp,.ntes-nav-app-msc,.ntes-nav-app-mail,.ntes-nav-app-lofter,.ntes-nav-app-study{background-image:url(http://img1.cache.netease.com/f2e/include/common_nav/images/nav_sprite_v33.png);background-repeat:no-repeat}
+
+
+
+.ntes-nav-app-newsapp,.ntes-nav-app-ht,.ntes-nav-app-open,.ntes-nav-app-note,.ntes-nav-app-yuedu,.ntes-nav-app-cd,.ntes-nav-app-cp,.ntes-nav-app-msc,.ntes-nav-app-mail,.ntes-nav-app-lofter,.ntes-nav-app-study{padding-left:32px;width:73px;display:block}
+.ntes-nav-app-newsapp{background-position:0 -156px}
+.ntes-nav-app-open{background-position:0 -186px}
+.ntes-nav-app-ht{background-position:0 -216px}
+.ntes-nav-app-note{background-position:0 -246px}
+.ntes-nav-app-yuedu{background-position:0 -276px}
+.ntes-nav-app-cp{background-position:0 -306px}
+.ntes-nav-app-cd{background-position:0 -335px}
+.ntes-nav-app-msc{background-position:0 -365px}
+.ntes-nav-app-yh{padding-left:32px;width:73px;display:block;background-image:url(http://img4.cache.netease.com/www/v2013/img/temp_jiaoyou.png);background-repeat:no-repeat;background-position:0 5px}
+.ntes-nav-app-mail{background-position:0 -413px}
+.ntes-nav-app-lofter{background-position:0 -443px}
+.ntes-nav-app-study{background-position:0 -590px}

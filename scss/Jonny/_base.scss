@@ -1,0 +1,102 @@
+// 这个文件是新建项目时默认引用的css样式文件，所有活动页面的字体单位全部使用rem
+/*- reste -*/
+@import "normalize-version";
+@import "normalize/base";
+@import "normalize/html5";
+@import "compass/css3";
+html {
+    -webkit-text-size-adjust:none;
+    -webkit-appearance:none;
+}
+html,body,div,p{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: shakenum;
+    src: url(../font/shake.ttf)  format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: shaketime;
+    src: url(../font/icomoon.ttf)  format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin background-img($value) {
+    background-image: $value;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+$back-color: #431555;
+$title-color: #ffef38;
+$font-color: #edc6f1;
+$foot-color: #a266a9;
+$font-color2: #fff;
+$font-times: #f64c59;
+$font-act: #f3a4aa;
+$begin-color: #de404c;
+$door-color: #f24853;
+$door-border: #d13940;
+$alert-color: #e53356;
+$sure-bg-color: #ffee33;
+$sure-border-color: #db7a23;
+$sure-font-color: #de2f51;
+// $baesurl: 'http://www-static1.iduobao.net/duobao-pages/shake';
+$baesurl: '..';
+$head-img: url($baesurl+'/images/head.jpg');
+$head-img2: url($baesurl+'/images/head2.png');
+$border-img: url($baesurl+'/images/back.png');
+$foot-img: url($baesurl+'/images/logo.png');
+$activ-img: url($baesurl+'/images/title.png');
+$session1: url($baesurl+'/images/session1.png');
+$session2: url($baesurl+'/images/session2.png');
+$share-bg-img: url($baesurl+'/images/btn_share.png');
+$lunbo-ball-img: url($baesurl+'/images/ball.png');
+$play-bg-img: url($baesurl+'/images/circle1.png');
+$play-run-img: url($baesurl+'/images/circle2.png');
+$play-before-img: url($baesurl+'/images/tri.png');
+$play-hand-img: url($baesurl+'/images/hand.png');
+$alert-bg-img: url($baesurl+'/images/alert.png');
+/**
+ *  移动设备常用mediaquery
+ *  应用于1024px以下设备
+ *  移动设备的基本字体为16px
+ */
+@media screen and (min-width : 640px) and (max-width : 1023px) {
+    html {
+        font-size:32px;
+    }
+}
+
+@media screen and (max-width : 423px) and (min-width : 414px) {
+    html {
+        font-size:20.7px;
+    }
+}
+
+@media screen and (max-width : 413px) and (min-width : 384px) {
+    html {
+        font-size:19.2px;
+    }
+}
+
+@media screen and (max-width : 383px) and (min-width : 375px) {
+    html {
+        font-size:18.75px;
+    }
+}
+
+@media screen and (max-width : 374px) and (min-width : 360px) {
+    html {
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width : 359px) and (min-width : 320px) {
+    html {
+        font-size:16px;
+    }
+}
