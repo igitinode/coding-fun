@@ -1,0 +1,126 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 50px 0;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: 'Avenir Next';
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  /* 字体抗锯齿 */
+}
+
+.slider, .slider .main, .slider .main .main-item {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.slider .main {
+  overflow: hidden;
+}
+.slider .main .main-item-right {
+  right: 50%;
+}
+.slider .main .main-item {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  z-index: 2;
+}
+.slider .main .main-item img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+.slider .main .main-item .caption {
+  position: absolute;
+  right: 50%;
+  top: 30%;
+  z-index: 9;
+}
+.slider .main .main-item .caption h2 {
+  opacity: 0;
+  margin-right: 45px;
+  font-size: 40px;
+  line-height: 50px;
+  color: #5b5b5b;
+  text-align: right;
+}
+.slider .main .main-item .caption h3 {
+  opacity: 0;
+  margin-right: -45px;
+  font-size: 70px;
+  line-height: 70px;
+  color: #000;
+  text-align: right;
+  font-family: 'Open Sans Condensed';
+}
+.slider .main .main-item-active {
+  right: 0;
+  opacity: 1;
+}
+.slider .main .main-item-active .caption {
+  margin-right: 13%;
+}
+.slider .main .main-item-active .caption h2,
+.slider .main .main-item-active .caption h3 {
+  margin-right: 0;
+  opacity: 1;
+  -webkit-transition: all 1s .8s;
+}
+.slider .ctrl {
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  width: 100%;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  font-size: 0;
+  -webkit-text-size-adjust: none;
+}
+.slider .ctrl .ctrl-item {
+  position: relative;
+  width: 150px;
+  height: 13px;
+  display: inline-block;
+  background-color: #666;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  margin-left: 1px;
+}
+.slider .ctrl .ctrl-item:hover {
+  background-color: #f0f0f0;
+}
+.slider .ctrl .ctrl-item:hover img {
+  bottom: 13px;
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.3)));
+  opacity: 1;
+  z-index: 2;
+}
+.slider .ctrl .ctrl-item img {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all .2s;
+}
+.slider .ctrl .ctrl-item-active {
+  background-color: #000;
+}
+.slider .ctrl .ctrl-item-active:hover {
+  background-color: #000;
+}
+.slider .ctrl .ctrl-item-active:hover img {
+  opacity: 0;
+}
