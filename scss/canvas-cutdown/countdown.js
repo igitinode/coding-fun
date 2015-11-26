@@ -44,7 +44,7 @@ window.onload = function () {
   setInterval( function(){
     render( context ); // 负责绘制
     update();          // 负责数据改变
-  }, 50);
+  }, 30);
 };
 
 // 1、编写绘制逻辑

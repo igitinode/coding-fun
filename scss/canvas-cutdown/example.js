@@ -33,7 +33,7 @@ window.onload = function(){
             update();
         }
         ,
-        50
+        30
     );
 }
 
