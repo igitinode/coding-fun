@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; }
+/* 要想实现全屏，高度必须100%，少一个也不行，去掉滚动条overflow:hidden; */
+html, body, h1 { height: 100%; overflow: hidden; }
+body { font-family: Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif; }
+h1 { font-size: 6em; font-weight: normal; }
+p { font-size: 2em; margin:0.5em 0 2em 0; }
+#container, .sections, .section { height: 100%; position: relative; }
+
+/* 使背景图始终位于屏幕中心 */
+#section0,
+#section1,
+#section2,
+#section3 {
+  background-color: #000;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#section0 {
+  color: #fff;
+  text-shadow:1px 1px 1px #333;
+  background-image: url('../images/1.jpg');
+
+  .title{
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-animation: sectitle0 1s ease-in-out 100ms forwards;
+    animation: sectitle0 1s ease-in-out 100ms forwards;
+  }
+
+  p {
+    color: #F1FF00;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-animation: sec0 1s ease-in-out 100ms forwards;
+    animation: sec0 1s ease-in-out 100ms forwards;
+  }
+}
+#section1 {
+  color: #fff;
+  text-shadow:1px 1px 1px #333;
+  background-image: url('../images/2.jpg');
+}
+#section2 {
+  color: #fff;
+  text-shadow:1px 1px 1px #666;
+  background-image: url('../images/3.jpg');
+}
+#section3 {
+  color: #008283;
+  text-shadow:1px 1px 1px #fff;
+  background-image: url('../images/4.jpg');
+
+  p{ color: #00A3AF; }
+}
+
+#container { width: 400%; }
+.left { float: left; }
+.intro {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.page {
+  position:fixed;
+  right: 10px;
+  top: 50%;
+  list-style: none;
+
+  li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 0 10px 5px;
+
+    &:active {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #FFFE00;
+      background: none;
+      margin-left: 0;
+    }
+  }
+}
+
+@-webkit-keyframes sectitle0 {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes sectitle0 {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes sec0 {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes sec0 {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
